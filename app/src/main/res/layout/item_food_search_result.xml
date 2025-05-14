@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/text_food_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_food_macros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Per 100g: 50 kcal, P: 2g, F: 0.5g, C: 10g"
+        android:textSize="12sp" />
+</LinearLayout> 

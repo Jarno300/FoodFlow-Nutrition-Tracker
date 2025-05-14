@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Light Theme Colors -->
+    <color name="light_primary">#4CAF50</color>         <!-- Fresh Green -->
+    <color name="light_primary_variant">#388E3C</color> <!-- Deep Green -->
+    <color name="light_secondary">#FF9800</color>       <!-- Warm Orange -->
+    <color name="light_secondary_variant">#F57C00</color> <!-- Deep Orange -->
+    <color name="light_background">#FAFAFA</color>      <!-- Off-White -->
+    <color name="light_surface">#FFFFFF</color>         <!-- White -->
+    <color name="light_error">#B00020</color>           <!-- Error Red -->
+    <color name="light_on_primary">#FFFFFF</color>      <!-- White text on primary -->
+    <color name="light_on_secondary">#000000</color>    <!-- Black text on secondary -->
+    <color name="light_on_background">#212121</color>   <!-- Dark Grey text on background -->
+    <color name="light_on_surface">#212121</color>      <!-- Dark Grey text on surface -->
+    <color name="light_on_error">#FFFFFF</color>        <!-- White text on error -->
+    
+    <!-- Nutrition-specific accent colors (light theme) -->
+    <color name="light_protein_color">#3F51B5</color>    <!-- Protein Blue -->
+    <color name="light_fat_color">#FF5722</color>        <!-- Fat Orange/Red -->
+    <color name="light_carbs_color">#FFC107</color>      <!-- Carbs Yellow/Gold -->
+    <color name="light_calories_color">#8BC34A</color>   <!-- Calories Light Green -->
+    
+    <!-- Dark Theme Colors -->
+    <color name="dark_primary">#81C784</color>          <!-- Lighter Green -->
+    <color name="dark_primary_variant">#2E7D32</color>  <!-- Deep Green -->
+    <color name="dark_secondary">#FFB74D</color>        <!-- Light Orange -->
+    <color name="dark_secondary_variant">#F57C00</color> <!-- Deep Orange -->
+    <color name="dark_background">#121212</color>       <!-- Dark Grey -->
+    <color name="dark_surface">#1E1E1E</color>          <!-- Slightly lighter Dark Grey -->
+    <color name="dark_error">#CF6679</color>            <!-- Lighter Red for dark theme -->
+    <color name="dark_on_primary">#000000</color>       <!-- Black text on primary -->
+    <color name="dark_on_secondary">#000000</color>     <!-- Black text on secondary -->
+    <color name="dark_on_background">#EEEEEE</color>    <!-- Light Grey text on background -->
+    <color name="dark_on_surface">#EEEEEE</color>       <!-- Light Grey text on surface -->
+    <color name="dark_on_error">#000000</color>         <!-- Black text on error -->
+    
+    <!-- Nutrition-specific accent colors (dark theme) -->
+    <color name="dark_protein_color">#7986CB</color>     <!-- Lighter Protein Blue -->
+    <color name="dark_fat_color">#FF8A65</color>         <!-- Lighter Fat Orange -->
+    <color name="dark_carbs_color">#FFD54F</color>       <!-- Lighter Carbs Yellow -->
+    <color name="dark_calories_color">#AED581</color>    <!-- Lighter Calories Green -->
+    
+    <!-- Additional useful colors -->
+    <color name="transparent">#00000000</color>
+    <color name="card_background_light">#F5F5F5</color>
+    <color name="card_background_dark">#2D2D2D</color>
+    <color name="divider_light">#E0E0E0</color>
+    <color name="divider_dark">#424242</color>
+    <color name="ripple_light">#1F000000</color>       <!-- Black with 12% opacity -->
+    <color name="ripple_dark">#33FFFFFF</color>        <!-- White with 20% opacity -->
+</resources>

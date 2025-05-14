@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/foodLogRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Add Food Form -->
+    <LinearLayout
+        android:id="@+id/addFoodForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/input_food_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Food Name" />
+
+        <EditText
+            android:id="@+id/input_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Amount (e.g. 100)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/input_measure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Measure (e.g. g, slice, ml)" />
+
+        <EditText
+            android:id="@+id/input_kcal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories (kcal)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/input_protein"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Protein (g)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/input_fat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fat (g)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/input_carbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Carbs (g)"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/button_add_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Food" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCC"
+        android:layout_marginVertical="8dp" />
+
+    <!-- Food Table -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/food_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"/>
+</LinearLayout>

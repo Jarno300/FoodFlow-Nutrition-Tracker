@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.FoodFlow.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_food_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Name (100g)"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Subtitle" />
+
+            <TextView
+                android:id="@+id/text_food_macros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50 kcal · P: 2g · F: 0.5g · C: 10g"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Body" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/button_delete_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete"
+            app:tint="@color/light_error" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView> 

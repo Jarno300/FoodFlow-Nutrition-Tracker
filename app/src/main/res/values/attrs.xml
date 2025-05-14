@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom FoodFlow theme attributes -->
+    <attr name="proteinColor" format="color" />
+    <attr name="fatColor" format="color" />
+    <attr name="carbsColor" format="color" />
+    <attr name="caloriesColor" format="color" />
+    <attr name="dividerColor" format="color" />
+    <attr name="rippleColor" format="color" />
+</resources> 

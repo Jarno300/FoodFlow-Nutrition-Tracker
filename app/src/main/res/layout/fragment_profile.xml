@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- User Profile Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Profile"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/input_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Weight (kg)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/input_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Height (cm)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/input_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Age (years)"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate BMR and TDEE" />
+
+        <!-- BMR and TDEE Results -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginVertical="16dp"
+            android:background="@android:color/white"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/text_bmr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BMR: Not calculated"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_tdee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TDEE: Not calculated"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Nutrition Goals Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Nutrition Goals"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/input_deficit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Deficit (0.8 = 20% deficit)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/input_protein_per_kg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Protein per kg (e.g., 2.0)"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/input_fat_percent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Fat % (30 for 30%)"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_save_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate and Save Nutrition Goals" />
+
+        <!-- Nutrition Goals Results -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:layout_marginVertical="16dp"
+            android:background="@android:color/white"
+            android:elevation="2dp">
+
+            <TextView
+                android:id="@+id/text_target_calories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Target calories: Not calculated" />
+
+            <TextView
+                android:id="@+id/text_target_protein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Target protein: Not calculated" />
+
+            <TextView
+                android:id="@+id/text_target_fat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Target fat: Not calculated" />
+
+            <TextView
+                android:id="@+id/text_target_carbs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Target carbs: Not calculated" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView> 

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground">
+
+    <!-- Date and Time Display -->
+    <TextView
+        android:id="@+id/text_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="28 september 2023, 14:30"
+        android:textAppearance="@style/TextAppearance.FoodFlow.Title"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Food Search Section -->
+    <androidx.cardview.widget.CardView
+        style="@style/Widget.FoodFlow.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Food to Today's Log"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Subtitle"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input_food_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Search foods..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1" />
+
+                <!-- Removed search button as it's now triggered by text input -->
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_results_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                android:background="?attr/colorSurface"
+                android:elevation="4dp"
+                android:padding="4dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/layout_selected_food"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_selected_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Selected Food"
+                    android:textAppearance="@style/TextAppearance.FoodFlow.Subtitle"/>
+
+                <TextView
+                    android:id="@+id/text_food_macros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Macros per 100g: 50 kcal, P: 2g, F: 0.5g, C: 10g"
+                    android:textAppearance="@style/TextAppearance.FoodFlow.Body"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/input_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Amount"
+                        android:inputType="numberDecimal"/>
+
+                    <TextView
+                        android:id="@+id/text_measure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="g"
+                        android:gravity="center_vertical"
+                        android:layout_marginHorizontal="8dp"/>
+
+                    <Button
+                        android:id="@+id/button_add_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Today's Food Logs -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Today's Food Log"
+        android:textAppearance="@style/TextAppearance.FoodFlow.Subtitle"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/food_logs_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Daily Totals -->
+    <androidx.cardview.widget.CardView
+        style="@style/Widget.FoodFlow.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Daily Totals"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Subtitle"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="4"
+                android:rowCount="3"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Calories"
+                    android:textStyle="bold"
+                    android:textColor="?attr/caloriesColor"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Protein"
+                    android:textStyle="bold"
+                    android:textColor="?attr/proteinColor"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Fat"
+                    android:textStyle="bold"
+                    android:textColor="?attr/fatColor"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Carbs"
+                    android:textStyle="bold"
+                    android:textColor="?attr/carbsColor"/>
+
+                <TextView
+                    android:id="@+id/text_total_kcal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                    android:text="0 kcal"/>
+
+                <TextView
+                    android:id="@+id/text_total_protein"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                    android:text="0 g"/>
+
+                <TextView
+                    android:id="@+id/text_total_fat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                    android:text="0 g"/>
+
+                <TextView
+                    android:id="@+id/text_total_carbs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                    android:text="0 g"/>
+
+                <TextView
+                    android:id="@+id/text_remaining_kcal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Remain: 2000"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/text_remaining_protein"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Remain: 150"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/text_remaining_fat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Remain: 70"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/text_remaining_carbs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="Remain: 200"
+                    android:textSize="12sp"/>
+            </GridLayout>
+            
+            <Button
+                android:id="@+id/button_save_and_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Save and Clear" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

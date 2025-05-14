@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.FoodFlow.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/text_history_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="28 September 2023"
+            android:textAppearance="@style/TextAppearance.FoodFlow.Title"
+            android:layout_marginBottom="8dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Calories"
+                android:textStyle="bold"
+                android:textColor="?attr/caloriesColor"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Protein"
+                android:textStyle="bold"
+                android:textColor="?attr/proteinColor"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Fat"
+                android:textStyle="bold"
+                android:textColor="?attr/fatColor"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Carbs"
+                android:textStyle="bold"
+                android:textColor="?attr/carbsColor"/>
+
+            <TextView
+                android:id="@+id/text_history_kcal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                android:text="0 kcal"/>
+
+            <TextView
+                android:id="@+id/text_history_protein"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                android:text="0 g"/>
+
+            <TextView
+                android:id="@+id/text_history_fat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                android:text="0 g"/>
+
+            <TextView
+                android:id="@+id/text_history_carbs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:textAppearance="@style/TextAppearance.FoodFlow.Body"
+                android:text="0 g"/>
+        </GridLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView> 
